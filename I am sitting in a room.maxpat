@@ -38,18 +38,27 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"fontface" : 1,
-					"fontsize" : 20.0,
-					"id" : "obj-110",
-					"maxclass" : "comment",
+					"id" : "obj-112",
+					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 412.0, 222.0, 261.0, 29.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 298.0, 46.0, 261.0, 29.0 ],
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 86.0, 493.0, 60.0, 22.0 ],
 					"style" : "",
-					"text" : "github.com/faaip",
-					"textjustification" : 1
+					"text" : "loadbang"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-111",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "float" ],
+					"patching_rect" : [ 86.0, 523.0, 29.5, 22.0 ],
+					"style" : "",
+					"text" : "10."
 				}
 
 			}
@@ -398,6 +407,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 0,
 					"patching_rect" : [ 265.0, 325.0, 44.0, 44.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 298.0, 13.0, 95.0, 95.0 ],
 					"prototypename" : "helpfile",
 					"style" : ""
 				}
@@ -543,7 +554,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 86.0, 556.0, 45.0, 22.0 ],
+					"patching_rect" : [ 86.0, 585.0, 45.0, 22.0 ],
 					"style" : "",
 					"text" : "* 1000"
 				}
@@ -560,9 +571,9 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 86.0, 524.0, 50.0, 22.0 ],
+					"patching_rect" : [ 86.0, 553.0, 50.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 28.0, 287.0, 80.5, 22.0 ],
+					"presentation_rect" : [ 28.0, 287.0, 81.0, 22.0 ],
 					"style" : ""
 				}
 
@@ -716,6 +727,24 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-107", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-2", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-111", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-111", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-112", 0 ]
 				}
 
 			}
@@ -1029,8 +1058,8 @@
 		"parameters" : 		{
 			"obj-16" : [ "gain", "gain", 0 ],
 			"obj-10::obj-21::obj-6" : [ "live.tab[3]", "live.tab[1]", 0 ],
-			"obj-5" : [ "gain[1]", "gain", 0 ],
-			"obj-10::obj-35" : [ "[5]", "Level", 0 ]
+			"obj-10::obj-35" : [ "[5]", "Level", 0 ],
+			"obj-5" : [ "gain[1]", "gain", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
